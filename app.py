@@ -2,8 +2,9 @@ from flask import Flask, render_template,jsonify,request,session,redirect,flash
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import base64
 import io
+import base64
+
 
 app = Flask( __name__ )
 app.secret_key = 'hfaiuhy18IUIUD1U'

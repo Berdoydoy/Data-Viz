@@ -19,9 +19,7 @@ fetch('/column_names')
     });
   });
 
-
 let draggedItem = null;
-
 function dragStartHandler(event) {
 event.dataTransfer.effectAllowed = 'move';
 event.dataTransfer.setData('text/plain', event.target.textContent);
