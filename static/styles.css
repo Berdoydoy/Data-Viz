@@ -1,0 +1,135 @@
+/* Spicing up the horizontal and vertical containers */
+body {
+  background-color: #333;
+}
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the graph container */
+.graph-container {
+  flex: 1;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the data container */
+.data-container {
+  flex: 0.5;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the heading and paragraph */
+h1,
+h3,
+p {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Styling for the file input */
+input[type="file"] {
+  color: #fff;
+  background-color: #444;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the submit button */
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container h3 {
+  margin-bottom: 10px;
+}
+
+/* Styling for the button */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button.red {
+  background-color: #dc3545;
+}
+
+.button.blue {
+  background-color: #007bff;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+/* Adding some animation to the containers */
+.horizontal-container,
+.vertical-container,
+.graph-container,
+.data-container {
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.drop-zone{
+  color: white;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

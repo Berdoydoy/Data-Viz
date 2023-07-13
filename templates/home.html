@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Visualization Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="horizontal-container">
+    
+    
+    <div class="graph-container">
+      <!-- Add your graph here using the appropriate library (e.g., Matplotlib, Seaborn, Plotly) -->
+      <!-- You can define a placeholder div and update it dynamically using JavaScript -->
+      <div id="graph-placeholder">
+        <div id="y-axis-drop-zone" class="drop-zone" ondragover="dragOverHandler(event)" ondrop="dropHandler(event)" name="y-axis">Y-Axis</div>
+        <img id="graph-image" src="" alt="Graph">
+        <div id="x-axis-drop-zone" class="drop-zone" ondragover="dragOverHandler(event)" ondrop="dropHandler(event)"name="x-axis">X-Axis</div>
+      </div>
+      
+    </div>
+
+    <div class="vertical-container">
+        <div class="source-container">
+            <h3 id="data-source">Data Source</h3>
+            <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+                <input id="file-input" type="file" name="file" accept=".csv, .xlsx" onchange="updateDataSource()">
+                <input id="submit-button" type="submit" value="Upload">
+            </form>
+        </div>
+
+        <div class="data-container">
+            <h3>Data Points</h3>
+            <!-- Display the column names -->
+            <ul id="data-points"></ul>
+        </div>
+    </div>
+
+    
+
+  </div>
+  <form id="graph-form" action="/create_graph" method="POST">
+    <input type="button" value="Create Graph" onclick="createGraph()">
+  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  
+</body>
+</html>
